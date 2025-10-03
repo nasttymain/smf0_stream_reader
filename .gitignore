@@ -1,0 +1,6 @@
+*.out
+*/*.out
+*.o
+*/*.o
+.vscode/*
+.vscode/*.*
