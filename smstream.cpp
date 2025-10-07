@@ -182,6 +182,10 @@ uint8_t mstream_next_message(smmsg_t* msg, smsdat_t* dat){
             msg->has_extra_data = 0;
             fread(&(msg->meta_data[0]), sizeof(uint8_t), msg->param2, dat->fp);
         }
+        if(msg->param1 == 0x2F && msg->param2 == 0x00){
+            // トラック終端記号
+            dat->reached_end = 1;
+        }
     }else{
         // メタイベントではないので追加データをクリア
         msg->meta_data[0] = 0;

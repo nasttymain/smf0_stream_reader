@@ -4,3 +4,4 @@
 */*.o
 .vscode/*
 .vscode/*.*
+do_not_stage_this_folder/*
